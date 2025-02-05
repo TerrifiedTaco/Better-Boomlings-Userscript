@@ -64,7 +64,7 @@
         document.getRootNode().body.innerHTML += leaderboardBox + styling + userBox + backgroundVideo
         document.getElementById('userbox').innerHTML = welcomeSpacing + list
         document.getElementById('welcomeSpacing').innerHTML = username
-        if(links.length > 5) {
+        if(links.length > 4) {
             document.getRootNode().body.innerHTML += extraLinksBox
             document.getElementById('extra-links').innerHTML = extrasList
         }
