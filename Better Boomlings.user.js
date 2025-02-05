@@ -1,9 +1,11 @@
 // ==UserScript==
 // @name         Better Boomlings
-// @namespace    http://tampermonkey.net/
-// @version      v7.4
+// @namespace    https://github.com/TerrifiedTaco/Better-Boomlings-Userscript
+// @version      v7.5
 // @description  Changes boomlings to make it look better.
 // @author       TerrifiedTaco
+// @updateURL    https://github.com/TerrifiedTaco/Better-Boomlings-Userscript/blob/main/Better%20Boomlings.user.js
+// @downloadURL  https://github.com/TerrifiedTaco/Better-Boomlings-Userscript/blob/main/Better%20Boomlings.user.js
 // @match        https://www.boomlings.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=boomlings.com
 // @run-at       document-ready
