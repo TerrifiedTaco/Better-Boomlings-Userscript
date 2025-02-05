@@ -24,8 +24,7 @@
     let backgroundVideoStyle = "#backgroundVideo {position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: 0;}"
     let extraLinksBox = "<div id='extra-links' style='z-index: 99999; margin: 10px; border: red; background-size: 10%; width: auto; align-items: center; background-color:#151f40; position: fixed; right: 15%; transform: translateY(-50%); border: 30px solid transparent; border-image: url(https://i.ibb.co/cKy7smKV/box-outline.png) 30 stretch;'></div>"
 
-    document.getRootNode().body.innerHTML += "<style>@import url('https://fonts.cdnfonts.com/css/pusab'); row {flex-direction: row;} * {background-color:transparent; font-family: 'Pusab', sans-serif; color:white; -webkit-text-stroke: 1px black; font-size: 20px;} body {flex-direction: row; background-color:#131720} form {margin:10px;} input {background-color:#151f30; height:30px; border-radius:10px; display:flex; align-items:center;} li + li { margin-top: 10px;} ul {list-style-type: none; list-style: none; padding: 0px; margin: 0px; } a:link, a:visited {background: linear-gradient(to top, yellow, orange); -webkit-background-clip: text; background-clip: text; color: transparent;} a {padding: 4px 8px; border: 1px outset black; border-radius: 8px; text-decoration: none; font-size: 30px; display: inline-flex; border-style: outset; border-width: 3px; border-color: #b1f249;} div.link {align-items: center; text-align: center; background-color: black; display: inline-block; background-color: #7ade2d; border-radius: 8px; border-color: black; border-width: 2px; border-style: solid; outline: white; outline-width: 2px; outline-style: solid; padding: 0px;} legend, label {background: linear-gradient(to top, yellow, orange); -webkit-background-clip: text; background-clip: text; color: transparent;} legend {font-size:30px}</style>"
-    //document.getRootNode().body.bgColor = "#131720"
+    document.getRootNode().body.innerHTML += "<style>@import url('https://fonts.cdnfonts.com/css/pusab'); * {background-color:transparent; font-family: 'Pusab', sans-serif; color:white; -webkit-text-stroke: 1px black; font-size: 20px;} body {flex-direction: row; background-color:#131720} form {margin:10px;} input {background-color:#151f30; height:30px; border-radius:10px; display:flex; align-items:center;} li + li { margin-top: 10px;} ul {list-style-type: none; list-style: none; padding: 0px; margin: 0px; } a:link, a:visited {background: linear-gradient(to top, yellow, orange); -webkit-background-clip: text; background-clip: text; color: transparent;} a {padding: 4px 8px; border: 1px outset black; border-radius: 8px; text-decoration: none; font-size: 30px; display: inline-flex; border-style: outset; border-width: 3px; border-color: #b1f249;} div.link {align-items: center; text-align: center; background-color: black; display: inline-block; background-color: #7ade2d; border-radius: 8px; border-color: black; border-width: 2px; border-style: solid; outline: white; outline-width: 2px; outline-style: solid; padding: 0px;} legend, label {background: linear-gradient(to top, yellow, orange); -webkit-background-clip: text; background-clip: text; color: transparent;} legend {font-size:30px}</style>"
 
     if(document.getElementById("login-form")) {
         let links = document.getRootNode().body.children[2].children[0].children[4].children
@@ -53,7 +52,6 @@
         let links = document.getRootNode().body.children.userbox.children[0].children
         let tempLinks = ""
         let tempExtraLinks = ""
-        console.log(links.length)
         for(let link of links) {
             if(link.innerText == "Change Password" || link.innerText == "Change Username" || link.innerText == "Delete Account" || link.innerText == "Logout") {
                 tempLinks += "<li><div class='link'>" + link.innerHTML + "</div></li>"
@@ -67,16 +65,6 @@
         let extrasList = "<ul>" + tempExtraLinks + "</ul>"
         console.log(list)
         console.log(extrasList)
-        //console.log(tempLinks)
-
-        //document.getRootNode().body.innerHTML = "<div id='mainBox' class='row' style='align-items: center;'></div><div id='sideBox' class='row' style='float:right;'></div>"
-
-        //document.getRootNode().body.innerHTML += styling
-
-        //document.getElementById('mainBox').innerHTML += banner + leaderboardBox + userBox
-
-        //document.getElementById('sideBox').innerHTML += extraLinksBox
-
 
         document.getRootNode().body.children[2].remove()
         document.getRootNode().body.children[2].remove()
@@ -92,7 +80,6 @@
 
     try {
         if(document.getRootNode().body.children[2].children[0].children[0].innerText == "Change Username") {
-            console.log("is be changin name")
             document.getRootNode().body.children[2].children[0].children[1].style.background = "linear-gradient(to top, Red, FireBrick)"
             document.getRootNode().body.children[2].children[0].children[1].style.WebkitBackgroundClip = "text"
             document.getRootNode().body.children[2].children[0].children[1].style.backgroundClip = "text"
@@ -102,9 +89,6 @@
             document.getRootNode().body.children[2].children[0].children[5].style.WebkitBackgroundClip = "text"
             document.getRootNode().body.children[2].children[0].children[5].style.backgroundClip = "text"
             document.getRootNode().body.children[2].children[0].children[5].style.color = "transparent"
-            //document.getRootNode().body.children[2].children[0].children[1].style
         }
     } catch {}
-    // welcome rifct : "<img src='https://cdn.discordapp.com/attachments/1015031272181071973/1333259091614896159/gold_-_Welcome_Rifct.png?ex=67983dca&is=6796ec4a&hm=4d2a34a7353ee2f2c4140c2b9a8fc34b168c1c7b50859bdba2a95b7d9fe8316a&' width='200' alt='GD Manager Logo' /></br>"
-    // rifct links : "<ul>   <li><a href='./changepassword.php'>Change Password</a></li>     <li><a href='./changeusername.php'>Change Username</a></li>     <li><a href='./editLeaderboard.php'>Edit Top 100</a></li>     <li><a href='./editGlobal.php'>Edit Global</a></li>     <li><a href='./editWhitelist.php'>Edit Whitelist</a></li>     <li><a href='./editLevelLeaderboard.php'>Edit Level Top</a></li>     <li><a href='./usernameToID.php'>Username to ID</a></li>     <li><a href='./deleteAccount.php'>Delete Account</a></li>     <li><a href='./logout.php'>Logout</a></li>   </ul>"
 })();
