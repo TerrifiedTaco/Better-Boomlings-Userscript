@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Better Boomlings
 // @namespace    https://github.com/TerrifiedTaco/Better-Boomlings-Userscript
-// @version      v7.5
+// @version      7.5
 // @description  Changes boomlings to make it look better.
 // @author       TerrifiedTaco
 // @updateURL    https://github.com/TerrifiedTaco/Better-Boomlings-Userscript/blob/main/Better%20Boomlings.user.js
@@ -46,7 +46,6 @@
 
     if(document.getElementById("userbox")) {
         let username = document.getRootNode().body.children.userbox.childNodes[0].data
-        //console.log(username)
         username = username.split(" ").pop()
 
         let links = document.getRootNode().body.children.userbox.children[0].children
@@ -75,9 +74,8 @@
             document.getRootNode().body.innerHTML += extraLinksBox
             document.getElementById('extra-links').innerHTML = extrasList
         }
-
     }
-
+    
     try {
         if(document.getRootNode().body.children[2].children[0].children[0].innerText == "Change Username") {
             document.getRootNode().body.children[2].children[0].children[1].style.background = "linear-gradient(to top, Red, FireBrick)"
